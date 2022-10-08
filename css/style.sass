@@ -1,0 +1,115 @@
+@import reset.sass
+
+:root 
+    --border-color: #d0d0d0cd
+    --background-color: #e5e5e5cd
+
+/* roboto-regular - latin */
+@font-face 
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 400
+  src: local(''),
+  src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'), //* Chrome 26+, Opera 23+, Firefox 39+ */
+  src: url('../fonts/roboto-v30-latin-regular.woff') format('woff') //* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+
+/* roboto-900 - latin */
+@font-face 
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 900
+  src: local(''),
+  src: url('../fonts/roboto-v30-latin-900.woff2') format('woff2'), //* Chrome 26+, Opera 23+, Firefox 39+ */
+  src: url('../fonts/roboto-v30-latin-900.woff') format('woff') //* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+
+*
+    box-sizing: border-box
+    
+body
+    display: flex
+    width: 100vw
+    padding: 0 15px
+    font-family: 'Roboto', sans-serif
+    
+
+.container
+    max-width: 1170px
+    padding: 70px 60px 50px
+    margin: 0 auto
+    text-align: center
+    background-color: var(--background-color)
+
+.profile 
+
+  &__title
+    font-size: 34px
+    font-weight: bold
+
+  &__ages
+    margin-top: 30px
+
+    font-size: 25px
+    font-weight: bold
+
+  &__description-main-short
+    margin-top: 25px
+
+    font-size: 25px
+    font-weight: bold
+
+  &__description-full
+    margin-top: 15px
+    padding: 5px
+    border: 1px solid var(--border-color)
+
+  &__image
+    width: 400px
+    height: 420px
+    border-radius: 600px
+
+    
+    // filter: grayscale(80%)
+    &-section
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        margin-top: 20px
+        padding: 5px
+        border: 1px solid var(--border-color)
+    &-caption
+        background-color: var(--border-color)
+        width: 100%
+        padding: 10px 0 
+    
+    
+
+  &__list
+    margin-top: 20px
+    margin-bottom: 20px
+
+    text-align: start
+    list-style: initial
+    
+    &-title
+        margin-top: 25px
+
+        font-size: 25px
+        font-weight: bold
+    &-text
+        display: inline
+
+    &-item
+        margin-top: 5px
+        &>strong
+            font-weight: bold
+
+    &-date
+
+  &__more
+
+
+
+
+
