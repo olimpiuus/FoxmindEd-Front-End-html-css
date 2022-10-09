@@ -51,11 +51,6 @@ table {
   border-spacing: 0;
 }
 
-:root {
-  --border-color: #d0d0d0cd;
-  --background-color: #e5e5e5cd;
-}
-
 /* roboto-regular - latin */
 @font-face {
   font-family: "Roboto";
@@ -74,6 +69,11 @@ table {
   src: url("../fonts/roboto-v30-latin-900.woff2") format("woff2");
   src: url("../fonts/roboto-v30-latin-900.woff") format("woff");
 }
+:root {
+  --border-color: #d0d0d0cd;
+  --background-color: #e5e5e5cd;
+}
+
 * {
   box-sizing: border-box;
 }
