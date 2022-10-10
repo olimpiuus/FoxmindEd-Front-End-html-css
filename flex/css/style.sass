@@ -3,28 +3,30 @@
   padding: 20px 0
   height: 100px
 
-
   text-align: center
   font-size: 25px
   font-weight: bold
+
   &>*
     line-height: 60px
+
 @mixin content
   padding: 20px
   width: 150px
 
 *
   box-sizing: border-box
+
 .container
   height: 100vh
   width: 100vw
 
   display: flex
   flex-direction: column
+
   &__content
     flex-grow: 1
     display: flex
-    
 
 
 .header 
@@ -46,8 +48,10 @@
   background-color: white
 
   padding: 20px
+
   &__title
     font-weight: bold
+
   &__text
     margin-top: 20px
     width: 100%
@@ -61,11 +65,11 @@
     color: white
 
 
-
 .footer 
   @include header-footer
 
   background-color: green
+  
   &__title
     color: white
     

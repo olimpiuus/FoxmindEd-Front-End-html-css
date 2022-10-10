@@ -2,19 +2,16 @@
 @mixin header-footer
   grid-column: 1/4
   
-
   text-align: center
   
-
   font-size: 25px
   font-weight: bold
   &>*
     line-height: 100px
+
 @mixin content
   padding: 20px
   grid-row: 2/5
-  
-
 
 .container
   height: 100vh
@@ -33,11 +30,11 @@
   &__title
     color: white
 
-    
-
+  
 .nav
   @include content
   background-color: orange
+
   &__title
 
 
@@ -46,11 +43,11 @@
   background-color: white
 
   padding: 20px
+
   &__title
     font-weight: bold
   &__text
     margin-top: 20px
-
 
 
 .related-links
@@ -59,7 +56,6 @@
 
   &__title
     color: white
-
 
 
 .footer 
@@ -71,6 +67,7 @@
     color: white
     
     text-align: center
+
 
 @media only screen and (max-width: 700px)
   .main,
