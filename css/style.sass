@@ -1,0 +1,102 @@
+@import reset.sass
+@import fonts.sass
+
+@mixin sub-title-bolt
+  font-size: 25px
+  font-weight: bold
+  
+
+:root 
+    --border-color: #d0d0d0cd
+    --background-color: #e5e5e5cd
+
+
+*
+    box-sizing: border-box
+    
+body
+    display: flex
+    width: 100vw
+    padding: 0 15px
+    font-family: 'Roboto', sans-serif
+    
+
+.container
+    max-width: 1170px
+    padding: 70px 60px 50px
+    margin: 0 auto
+    text-align: center
+    background-color: var(--background-color)
+
+.profile 
+
+  &__title
+    font-size: 34px
+    font-weight: bold
+
+  &__ages
+    margin-top: 30px
+
+    @include sub-title-bolt
+
+  &__description-main-short
+    margin-top: 25px
+
+    @include sub-title-bolt
+
+  &__description-full
+    margin-top: 15px
+    padding: 5px
+    border: 1px solid var(--border-color)
+
+  &__image
+    width: 400px
+    height: 420px
+    border-radius: 600px
+
+    
+    // filter: grayscale(80%)
+    &-section
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        margin-top: 20px
+        padding: 5px
+        border: 1px solid var(--border-color)
+    &-caption
+        background-color: var(--border-color)
+        width: 100%
+        padding: 10px 0 
+    
+    
+
+  &__list
+    margin-top: 20px
+    margin-bottom: 20px
+
+    text-align: start
+    list-style: initial
+    
+    &-title
+        margin-top: 25px
+
+        font-size: 25px
+        font-weight: bold
+    &-text
+        display: inline
+
+    &-item
+        margin-top: 5px
+        &>strong
+            font-weight: bold
+
+    &-date
+
+  &__more
+
+
+
+
+
