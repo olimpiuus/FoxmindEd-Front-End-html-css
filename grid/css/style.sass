@@ -1,0 +1,58 @@
+@import reset.sass
+@mixin header-footer
+  padding: 20px 0
+
+  text-align: center
+  font-size: 30
+  font-weight: bold
+@mixin content
+  padding: 20px
+
+
+body
+  height: 100vh
+
+.header 
+  @include header-footer
+  background-color: #4c51ee
+  &__title
+    color: white
+    
+
+.nav
+  @include content
+  background-color: orange
+  &__title
+
+
+.main
+  @include content
+  background-color: white
+
+  padding: 20px
+  &__title
+    font-weight: bold
+  &__text
+    margin-top: 20px
+
+
+
+.related-links
+  @include content
+  background-color: purple
+
+  &__title
+    color: white
+
+
+
+.footer 
+  @include header-footer
+
+  background-color: green
+  &__title
+    color: white
+    
+    text-align: center
+
+

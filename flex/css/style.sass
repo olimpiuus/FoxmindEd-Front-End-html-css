@@ -1,0 +1,75 @@
+@import reset.sass
+@mixin header-footer
+  padding: 20px 0
+
+  text-align: center
+  font-size: 30
+  font-weight: bold
+@mixin content
+  padding: 20px
+  width: 150px
+
+*
+  box-sizing: border-box
+.container
+  height: 100vh
+  width: 100vw
+
+  display: flex
+  flex-direction: column
+  &__content
+    flex-grow: 1
+    display: flex
+    
+
+
+.header 
+  @include header-footer
+  background-color: #4c51ee
+  &__title
+    color: white
+    
+
+.nav
+  @include content
+  background-color: orange
+  &__title
+
+
+.main
+  @include content
+  flex-grow: 1
+  background-color: white
+
+  padding: 20px
+  &__title
+    font-weight: bold
+  &__text
+    margin-top: 20px
+    width: 100%
+
+
+.related-links
+  @include content
+  background-color: purple
+
+  &__title
+    color: white
+
+
+
+.footer 
+  @include header-footer
+
+  background-color: green
+  &__title
+    color: white
+    
+    text-align: center
+
+@media only screen and (max-width: 700px)
+  .container
+    &__content
+      flex-direction: column
+      &>*
+        width: 100%
