@@ -51,16 +51,23 @@ table {
   border-spacing: 0;
 }
 
-body {
+.container {
   height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 100px 60px 1fr 60px 100px;
+  grid-template-columns: 150px 1fr 150px;
 }
 
 .header {
-  padding: 20px 0;
+  grid-column: 1/4;
   text-align: center;
-  font-size: 30;
+  font-size: 25px;
   font-weight: bold;
   background-color: #4c51ee;
+}
+.header > * {
+  line-height: 100px;
 }
 .header__title {
   color: white;
@@ -68,10 +75,12 @@ body {
 
 .nav {
   padding: 20px;
+  grid-row: 2/5;
   background-color: orange;
 }
 .main {
   padding: 20px;
+  grid-row: 2/5;
   background-color: white;
   padding: 20px;
 }
@@ -84,6 +93,7 @@ body {
 
 .related-links {
   padding: 20px;
+  grid-row: 2/5;
   background-color: purple;
 }
 .related-links__title {
@@ -91,13 +101,26 @@ body {
 }
 
 .footer {
-  padding: 20px 0;
+  grid-column: 1/4;
   text-align: center;
-  font-size: 30;
+  font-size: 25px;
   font-weight: bold;
+  grid-row: 5;
   background-color: green;
+}
+.footer > * {
+  line-height: 100px;
 }
 .footer__title {
   color: white;
   text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .main,
+.nav,
+.related-links {
+    grid-row: initial;
+    grid-column: 1/4;
+  }
 }/*# sourceMappingURL=style.css.map */
