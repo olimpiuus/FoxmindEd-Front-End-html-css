@@ -87,9 +87,8 @@ table {
 .dot-list {
   display: flex;
   gap: 18px;
-  transform: translateX(-24px);
-  -webkit-animation: eat 0.3s linear 0s infinite forwards;
-          animation: eat 0.3s linear 0s infinite forwards;
+  -webkit-animation: eat 0.5s linear 0s infinite forwards;
+          animation: eat 0.5s linear 0s infinite forwards;
 }
 .pacman {
   position: relative;
@@ -106,27 +105,27 @@ table {
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
-  border-right: 40px solid #2f2f2f;
+  border-right: 120px solid #2f2f2f;
   border-bottom: 20px solid transparent;
   border-radius: 100%;
-  animation: pacman 0.3s ease-in 0s infinite alternate-reverse;
+  animation: pacman 0.5s ease-in 0s infinite alternate-reverse;
 }
 
 @-webkit-keyframes pacman {
   0% {
-    border-right: 33.3333333333px solid #2f2f2f;
+    border-right: 20px solid #2f2f2f;
   }
   100% {
-    border-right: 600px solid #2f2f2f;
+    border-right: 400px solid #2f2f2f;
   }
 }
 
 @keyframes pacman {
   0% {
-    border-right: 33.3333333333px solid #2f2f2f;
+    border-right: 20px solid #2f2f2f;
   }
   100% {
-    border-right: 600px solid #2f2f2f;
+    border-right: 400px solid #2f2f2f;
   }
 }
 @-webkit-keyframes eat {

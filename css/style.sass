@@ -25,11 +25,9 @@ $backgroud-color:#2f2f2f
   &-list
     display: flex
     gap: 18px
-
-    transform: translateX(-24px)
-    animation: eat 0.3s linear 0s infinite forwards
+    
+    animation: eat 0.5s linear 0s infinite forwards
   &-item
-
 
 .pacman
   position: relative
@@ -45,18 +43,20 @@ $backgroud-color:#2f2f2f
     left: 50%
     width: 0
     height: 0
+
     border-top: calc($pacman-height/2) solid transparent
-    border-right: calc($pacman-width)  solid $backgroud-color
+    border-right: calc($pacman-width*3)  solid $backgroud-color
     border-bottom: calc($pacman-height/2) solid transparent
     border-radius: 100%
-    animation: pacman 0.3s ease-in 0s infinite alternate-reverse
+
+    animation: pacman 0.5s ease-in 0s infinite alternate-reverse
 
 
 @keyframes pacman
   0%
-    border-right: calc($pacman-width/1.2) solid $backgroud-color
+    border-right: calc($pacman-width/2) solid $backgroud-color
   100%
-    border-right: calc($pacman-width*15) solid $backgroud-color
+    border-right: calc($pacman-width*10) solid $backgroud-color
 
 @keyframes eat
   0%
