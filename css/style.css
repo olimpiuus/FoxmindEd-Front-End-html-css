@@ -90,6 +90,11 @@ table {
   -webkit-animation: eat 0.5s linear 0s infinite forwards;
           animation: eat 0.5s linear 0s infinite forwards;
 }
+.first-dot {
+  -webkit-animation: first-dot 0.5s linear 0s infinite forwards;
+          animation: first-dot 0.5s linear 0s infinite forwards;
+}
+
 .pacman {
   position: relative;
 }
@@ -142,5 +147,21 @@ table {
   }
   100% {
     transform: translateX(-24px);
+  }
+}
+@-webkit-keyframes first-dot {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes first-dot {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }/*# sourceMappingURL=style.css.map */

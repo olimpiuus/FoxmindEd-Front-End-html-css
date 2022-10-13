@@ -29,6 +29,9 @@ $backgroud-color:#2f2f2f
     animation: eat 0.5s linear 0s infinite forwards
   &-item
 
+.first-dot
+  animation: first-dot 0.5s linear 0s infinite forwards
+
 .pacman
   position: relative
   &__round
@@ -63,4 +66,10 @@ $backgroud-color:#2f2f2f
     transform: translateX(0px)
   100%
     transform: translateX(-24px)
+
+@keyframes first-dot
+  0%
+    opacity:1
+  100%
+    opacity:0
     
