@@ -1,149 +1,87 @@
 @import reset.sass
 @import fonts.sass
 
-:root
-  --inputs-title-color: #53b297
-  --form-title-color: #606060
-  --backgroud-form-top-bottom: #ededed
-  --backgroud-form-inputs:#f8f8f8
-  --borders: #c2c2c2
+$pacman-width: 50px
+$pacman-height: 50px
+$backgroud-color:#2f2f2f
+
+@mixin pacman-round
+  width: $pacman-width
+  height: calc( $pacman-height/2)
+
+  background-color: yellow
 
 .container
+  width: 100vw
+  height: 100vh
+
   display: flex
   align-items: center
   justify-content: center
-  
-  padding: 10px 20px
-  height: 100vh
-  box-sizing: border-box
-  background-color: #1298a4
 
-.asterics
+  background-color: $backgroud-color
 
-.form
-  display: grid
-  grid-template-rows: 100px 1fr 50px
-  flex-grow: 1
-  align-self: stretch
+.dot 
+  width: 10px
+  height: 10px
 
-  border-radius: 15px
-  overflow: hidden
-
-  &__header
-    display: block
-    text-align: center
-    line-height: 100px
-
-    border-bottom: 1px solid var(--borders)
-    background-color: var(--backgroud-form-top-bottom)
-
-  &__title
-    font-size: 25px
-    color: var(--form-title-color)
-
-  &__footer
-    position: relative
-
-    border-top: 1px solid var(--borders)
-    background-color: var(--backgroud-form-top-bottom)
-    
-    &-btn
-      position: absolute
-      left: 85%
-      top: 50%
-      transform: translateY(-50%)
-
-      margin: auto 0 
-      padding: 8px 20px
-      border-radius: 5px
-      border: none
-
-      font-size: 18px
-      background-color: var(--inputs-title-color)
-      color: var(--backgroud-form-inputs)
-
-  &__inputs-list
-    display: grid
-    grid-template-columns: 1fr 1fr
-    grid-template-rows: repeat(6, 1fr) 100px
-    gap: 20px
-    row-gap: 10px
-    align-items: center
-    justify-content: center
-
-    padding: 30px
-    background-color: var(--backgroud-form-inputs)
-
-  &__list-item
-    height: 100%
+  border-radius: 100%
+  background-color: white
+  &-list
     display: flex
+    gap: 30px
+    z-index: 5
+
+    transform: translateX(-20px)
+  &-item
+
+
+.pacman
+  position: relative
+  &__round
+    &_top
+      @include pacman-round
+
+      border-radius:  50px 50px 0 0 
+    &_bottom
+      @include pacman-round
+
+      border-radius:  0 0 50px 50px
+      background-color: red
+      // transform: rotate(30rad)
+      transform: rotate(15deg)
+    &_left
+      @include pacman-round
+      position: absolute
+      top: 0  
+      width: calc( $pacman-width/2)
+      height: $pacman-height
+
+      border-radius: 50px 0 0 50px 
+
+
+
+
     
 
-  &__label
-    color: var(--inputs-title-color)
-    flex-grow: 1
-    align-self: stretch
-    font-weight: bold
+  // &__slice
+  //   z-index: 1
+  //   position: absolute
+  //   left: 50%
+  //   width: 0
+  //   height: 0
+  //   border-top: calc($pacman-height/2) solid transparent
+  //   border-right: calc($pacman-width)  solid $backgroud-color
+  //   border-bottom: calc($pacman-height/2) solid transparent
+  //   border-radius: 100%
+  //   animation: pacman 0.3s ease-in 0s infinite alternate-reverse
+    
 
-    &_radio
-      color: var(--form-title-color)
 
-    &_checkbox
 
-      color: var(--form-title-color)
 
-  &__income
-      display: grid
-      grid-template-columns: 90% 1fr
-      grid-template-rows: 0% 1fr
-      grid-template-areas: "title title" "range block"
-      grid-auto-flow: column
-      gap: 5px
-      align-items: center
-      justify-content: start 
-
-  &__input
-    display: block
-    width: 100%
-    height: 30px
-
-    border-radius: 5px
-    padding: 5px 10px
-    border: 1px solid var(--borders)
-    box-sizing: border-box
-
-    &_checkbox
-      border: 1px solid var(--borders)
-
-    &__range
-
-    &_radio
-      border: 1px solid var(--borders)
-
-    &_file
-      color: var(--form-title-color)
-
-    &_textarea
-      resize: none
-      height: 100%
-      overflow: scroll
-
-  &__fieldset
-
-  &__income-block
-    grid-area: block
-    text-align: center
-
-    padding: 5px
-    border-radius: 5px
-
-    background-color: var(--inputs-title-color)
-    color: var(--backgroud-form-top-bottom)
-
-.textarea
-  grid-row: 7
-  grid-column: 1 / 3
-
-.email
-  grid-column: 1 / 3
-
+@keyframes pacman
+  0%
+    border-right: calc($pacman-width/1.2) solid $backgroud-color
+  100%
+    border-right: calc($pacman-width*15) solid $backgroud-color
