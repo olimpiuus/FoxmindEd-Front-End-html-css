@@ -1,15 +1,10 @@
 @import reset.sass
 @import fonts.sass
 
-$pacman-width: 50px
-$pacman-height: 50px
+$pacman-width: 40px
+$pacman-height: 40px
 $backgroud-color:#2f2f2f
 
-@mixin pacman-round
-  width: $pacman-width
-  height: calc( $pacman-height/2)
-
-  background-color: yellow
 
 .container
   width: 100vw
@@ -22,62 +17,39 @@ $backgroud-color:#2f2f2f
   background-color: $backgroud-color
 
 .dot 
-  width: 10px
-  height: 10px
+  width: 7px
+  height: 7px
 
   border-radius: 100%
   background-color: white
   &-list
     display: flex
-    gap: 30px
-    z-index: 5
+    gap: 18px
 
-    transform: translateX(-20px)
+    transform: translateX(-24px)
+    animation: eat 0.3s linear 0s infinite forwards
   &-item
 
 
 .pacman
   position: relative
   &__round
-    &_top
-      @include pacman-round
+    width: $pacman-width
+    height: $pacman-height
 
-      border-radius:  50px 50px 0 0 
-    &_bottom
-      @include pacman-round
+    border-radius:  100%
+    background-color: yellow
 
-      border-radius:  0 0 50px 50px
-      background-color: red
-      // transform: rotate(30rad)
-      transform: rotate(15deg)
-    &_left
-      @include pacman-round
-      position: absolute
-      top: 0  
-      width: calc( $pacman-width/2)
-      height: $pacman-height
-
-      border-radius: 50px 0 0 50px 
-
-
-
-
-    
-
-  // &__slice
-  //   z-index: 1
-  //   position: absolute
-  //   left: 50%
-  //   width: 0
-  //   height: 0
-  //   border-top: calc($pacman-height/2) solid transparent
-  //   border-right: calc($pacman-width)  solid $backgroud-color
-  //   border-bottom: calc($pacman-height/2) solid transparent
-  //   border-radius: 100%
-  //   animation: pacman 0.3s ease-in 0s infinite alternate-reverse
-    
-
-
+  &__slice
+    position: absolute
+    left: 50%
+    width: 0
+    height: 0
+    border-top: calc($pacman-height/2) solid transparent
+    border-right: calc($pacman-width)  solid $backgroud-color
+    border-bottom: calc($pacman-height/2) solid transparent
+    border-radius: 100%
+    animation: pacman 0.3s ease-in 0s infinite alternate-reverse
 
 
 @keyframes pacman
@@ -85,3 +57,10 @@ $backgroud-color:#2f2f2f
     border-right: calc($pacman-width/1.2) solid $backgroud-color
   100%
     border-right: calc($pacman-width*15) solid $backgroud-color
+
+@keyframes eat
+  0%
+    transform: translateX(0px)
+  100%
+    transform: translateX(-24px)
+    
