@@ -5,6 +5,10 @@ $pacman-width: 40px
 $pacman-height: 40px
 $backgroud-color:#2f2f2f
 
+@mixin border-triangle
+  border-right: calc($pacman-width/2)  solid $backgroud-color
+
+
 
 .container
   width: 100vw
@@ -48,7 +52,7 @@ $backgroud-color:#2f2f2f
     height: 0
 
     border-top: calc($pacman-height/2) solid transparent
-    border-right: calc($pacman-width*3)  solid $backgroud-color
+    @include border-triangle
     border-bottom: calc($pacman-height/2) solid transparent
     border-radius: 100%
 
@@ -57,9 +61,11 @@ $backgroud-color:#2f2f2f
 
 @keyframes pacman
   0%
-    border-right: calc($pacman-width/2) solid $backgroud-color
+    @include border-triangle
   100%
-    border-right: calc($pacman-width*10) solid $backgroud-color
+    @include border-triangle
+    border-right-width: calc($pacman-width*10)
+    
 
 @keyframes eat
   0%

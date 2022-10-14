@@ -110,7 +110,7 @@ table {
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
-  border-right: 120px solid #2f2f2f;
+  border-right: 20px solid #2f2f2f;
   border-bottom: 20px solid transparent;
   border-radius: 100%;
   animation: pacman 0.5s ease-in 0s infinite alternate-reverse;
@@ -121,7 +121,8 @@ table {
     border-right: 20px solid #2f2f2f;
   }
   100% {
-    border-right: 400px solid #2f2f2f;
+    border-right: 20px solid #2f2f2f;
+    border-right-width: 400px;
   }
 }
 
@@ -130,7 +131,8 @@ table {
     border-right: 20px solid #2f2f2f;
   }
   100% {
-    border-right: 400px solid #2f2f2f;
+    border-right: 20px solid #2f2f2f;
+    border-right-width: 400px;
   }
 }
 @-webkit-keyframes eat {
