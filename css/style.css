@@ -1,203 +1,79 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
- * v2.0 | 20110126
- * License: none (public domain) */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
 body {
-  line-height: 1;
+  margin: 0;
 }
 
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* roboto-regular - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  src: local("");
-  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2");
-  src: url("../fonts/roboto-v30-latin-regular.woff") format("woff");
-}
-/* roboto-900 - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 900;
-  src: local("");
-  src: url("../fonts/roboto-v30-latin-900.woff2") format("woff2");
-  src: url("../fonts/roboto-v30-latin-900.woff") format("woff");
-}
-:root {
-  --inputs-title-color: #53b297;
-  --form-title-color: #606060;
-  --backgroud-form-top-bottom: #ededed;
-  --backgroud-form-inputs:#f8f8f8;
-  --borders: #c2c2c2;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
+main {
   height: 100vh;
-  box-sizing: border-box;
-  background-color: #1298a4;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
 }
 
-.form {
-  display: grid;
-  grid-template-rows: 100px 1fr 50px;
-  flex-grow: 1;
-  align-self: stretch;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.form__header {
-  display: block;
-  text-align: center;
-  line-height: 100px;
-  border-bottom: 1px solid var(--borders);
-  background-color: var(--backgroud-form-top-bottom);
-}
-.form__title {
-  font-size: 25px;
-  color: var(--form-title-color);
-}
-.form__footer {
+section {
+  transform-style: preserve-3d;
   position: relative;
-  border-top: 1px solid var(--borders);
-  background-color: var(--backgroud-form-top-bottom);
-}
-.form__footer-btn {
-  position: absolute;
-  left: 85%;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: auto 0;
-  padding: 8px 20px;
-  border-radius: 5px;
-  border: none;
-  font-size: 18px;
-  background-color: var(--inputs-title-color);
-  color: var(--backgroud-form-inputs);
-}
-.form__inputs-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(6, 1fr) 100px;
-  gap: 20px;
-  row-gap: 10px;
+  height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
-  background-color: var(--backgroud-form-inputs);
+  color: white;
+  box-shadow: 5px 5px 5px 5px black;
 }
-.form__list-item {
-  height: 100%;
-  display: flex;
+
+.no-parallax {
+  height: 120vh;
+  z-index: 999;
+  background-image: url(../img/between.jpg);
+  background-size: cover;
 }
-.form__label {
-  color: var(--inputs-title-color);
-  flex-grow: 1;
-  align-self: stretch;
-  font-weight: bold;
-}
-.form__label_radio {
-  color: var(--form-title-color);
-}
-.form__label_checkbox {
-  color: var(--form-title-color);
-}
-.form__income {
-  display: grid;
-  grid-template-columns: 90% 1fr;
-  grid-template-rows: 0% 1fr;
-  grid-template-areas: "title title" "range block";
-  grid-auto-flow: column;
-  gap: 5px;
-  align-items: center;
-  justify-content: start;
-}
-.form__input {
-  display: block;
-  width: 100%;
-  height: 30px;
-  border-radius: 5px;
-  padding: 5px 10px;
-  border: 1px solid var(--borders);
-  box-sizing: border-box;
-}
-.form__input_checkbox {
-  border: 1px solid var(--borders);
-}
-.form__input_radio {
-  border: 1px solid var(--borders);
-}
-.form__input_file {
-  color: var(--form-title-color);
-}
-.form__input_textarea {
-  resize: none;
-  height: 100%;
-  overflow: scroll;
-}
-.form__income-block {
-  grid-area: block;
+
+section h1 {
   text-align: center;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: var(--inputs-title-color);
-  color: var(--backgroud-form-top-bottom);
+  font-size: 4rem;
+  font-family: sans-serif;
 }
 
-.textarea {
-  grid-row: 7;
-  grid-column: 1/3;
+.parallax h1 {
+  width: 60%;
+  font-size: 4rem;
 }
 
-.email {
-  grid-column: 1/3;
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(2);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg-winter::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-image: url("https://picsum.photos/1080/720");
+  background-image: url(../img/winter.webp);
+}
+
+.bg-spring::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-image: url("https://picsum.photos/1080/720");
+  background-image: url(../img/spring-nature-wallpaper-1.jpeg);
+}
+
+.bg-summer::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-image: url("https://picsum.photos/1080/720");
+  background-image: url(../img/summer.jpeg);
+}
+
+.bg-fall::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-image: url("https://picsum.photos/1080/720");
+  background-image: url(../img/fall.webp);
 }/*# sourceMappingURL=style.css.map */
