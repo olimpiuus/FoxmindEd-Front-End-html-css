@@ -1,8 +1,10 @@
 # html-css
 
-task 1.3
+task 1.6
 
-Create a form with a similar design, be sure to use all the specified inputs.
-It would be a plus to use the var in CSS to change the text color easily  (or you can import the scss or sass preprocessor)
+Create a documentation page as in the example. In the left column, there should be a list of all types of CSS displays and a short description of 1 item.
 
-Library  link - https://www.studytonight.com/sass/
+Example
+https://drive.google.com/file/d/1wJElfFqyIF1OzFjAWq3_nbTInAPQGtWm/view
+
+Resource link - https://www.w3schools.com/cssref/pr_class_display.asp

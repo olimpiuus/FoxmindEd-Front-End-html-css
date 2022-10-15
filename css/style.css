@@ -1,79 +1,71 @@
-body {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-main {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 1px;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
-section {
-  transform-style: preserve-3d;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  box-shadow: 5px 5px 5px 5px black;
+body {
+  line-height: 1;
 }
 
-.no-parallax {
-  height: 120vh;
-  z-index: 999;
-  background-image: url(../img/between.jpg);
-  background-size: cover;
+ol, ul {
+  list-style: none;
 }
 
-section h1 {
-  text-align: center;
-  font-size: 4rem;
-  font-family: sans-serif;
+blockquote, q {
+  quotes: none;
 }
 
-.parallax h1 {
-  width: 60%;
-  font-size: 4rem;
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
 }
 
-.parallax::after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: translateZ(-1px) scale(2);
-  background-size: 100%;
-  z-index: -1;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-.bg-winter::after {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  background-size: cover;
-  background-image: url("https://picsum.photos/1080/720");
-  background-image: url(../img/winter.webp);
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("");
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2");
+  src: url("../fonts/roboto-v30-latin-regular.woff") format("woff");
 }
-
-.bg-spring::after {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  background-size: cover;
-  background-image: url("https://picsum.photos/1080/720");
-  background-image: url(../img/spring-nature-wallpaper-1.jpeg);
-}
-
-.bg-summer::after {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  background-size: cover;
-  background-image: url("https://picsum.photos/1080/720");
-  background-image: url(../img/summer.jpeg);
-}
-
-.bg-fall::after {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  background-size: cover;
-  background-image: url("https://picsum.photos/1080/720");
-  background-image: url(../img/fall.webp);
+/* roboto-900 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("");
+  src: url("../fonts/roboto-v30-latin-900.woff2") format("woff2");
+  src: url("../fonts/roboto-v30-latin-900.woff") format("woff");
 }/*# sourceMappingURL=style.css.map */
