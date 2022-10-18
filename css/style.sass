@@ -31,10 +31,25 @@ body
     @include size-window
     position: relative
     scroll-snap-align: center
+    
 
-  &__img
+  &__img-and-text
     @include size-window
+    @include flex-center-center
     background-size: contain
+
+  &__text
+    width: 70%
+    text-align: center
+    color: white
+    background-color: #00000055
+    padding: 10px
+    &-title
+      text-transform: uppercase
+      letter-spacing: 0.3rem
+      font-size: 20px
+    &-content
+      margin-top: 10px
 
   &__link
     @mixin link
@@ -98,10 +113,10 @@ body
 
 
 
-#carousel_block1 > .carousel__img
+#carousel_block1 > .carousel__img-and-text
     background-image: url(https://picsum.photos/600/400)
-#carousel_block2 > .carousel__img
+#carousel_block2 > .carousel__img-and-text
     background-image: url(https://picsum.photos/599/399)
-#carousel_block3 > .carousel__img
+#carousel_block3 > .carousel__img-and-text
     background-image: url(https://loremflickr.com/600/400)
     

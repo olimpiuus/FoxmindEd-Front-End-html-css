@@ -81,10 +81,28 @@ body {
   position: relative;
   scroll-snap-align: center;
 }
-.carousel__img {
+.carousel__img-and-text {
   width: 600px;
   height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: contain;
+}
+.carousel__text {
+  width: 70%;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  padding: 10px;
+}
+.carousel__text-title {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 20px;
+}
+.carousel__text-content {
+  margin-top: 10px;
 }
 .carousel__link_back {
   display: block;
@@ -161,14 +179,14 @@ body {
   background-color: white;
 }
 
-#carousel_block1 > .carousel__img {
+#carousel_block1 > .carousel__img-and-text {
   background-image: url(https://picsum.photos/600/400);
 }
 
-#carousel_block2 > .carousel__img {
+#carousel_block2 > .carousel__img-and-text {
   background-image: url(https://picsum.photos/599/399);
 }
 
-#carousel_block3 > .carousel__img {
+#carousel_block3 > .carousel__img-and-text {
   background-image: url(https://loremflickr.com/600/400);
 }/*# sourceMappingURL=style.css.map */
