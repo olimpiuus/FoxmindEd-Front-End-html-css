@@ -51,76 +51,11 @@ table {
   border-spacing: 0;
 }
 
-/* roboto-regular - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  src: local("");
-  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2");
-  src: url("../fonts/roboto-v30-latin-regular.woff") format("woff");
-}
-/* roboto-900 - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 900;
-  src: local("");
-  src: url("../fonts/roboto-v30-latin-900.woff2") format("woff2");
-  src: url("../fonts/roboto-v30-latin-900.woff") format("woff");
-}
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  color: black;
-  font-family: sans-serif;
-}
-
-.nav {
-  position: fixed;
+.carousel__img {
   width: 200px;
-  height: 100vh;
-  background-color: #dedede;
-  border-right: 1px solid black;
+  height: 300px;
+  background-image: url(https://loremflickr.com/320/240);
 }
-.nav__title {
-  padding: 7px;
-  border-bottom: 1px solid #c5c5c5;
-  font-weight: bold;
-}
-.nav__item {
-  padding: 7px;
-  border-bottom: 1px solid #c5c5c5;
-}
-.nav__link {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: inherit;
-}
-.nav__link:hover {
-  text-decoration: underline;
-}
-
-.main {
-  grid-column: 2;
-}
-.main__list {
-  padding: 15px;
-}
-.main__list-item {
-  margin-bottom: 25px;
-}
-
-.text__title {
-  font-size: 20px;
-  font-weight: bold;
-}
-.text__content {
-  margin-top: 20px;
+#carousel_block1 > .carousel__img {
+  background-image: url(https://picsum.photos/200/300);
 }/*# sourceMappingURL=style.css.map */

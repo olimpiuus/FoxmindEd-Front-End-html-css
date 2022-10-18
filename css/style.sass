@@ -1,69 +1,38 @@
 @import reset.sass
-@import fonts.sass
 
-@mixin nav-border-padding
-  padding: 7px
-  border-bottom: 1px solid $nav-inner-borde-color
+.carousel
 
-$color-text: black
-
-$background-nav: #dedede
-$nav-inner-borde-color: darken($background-nav, 10)
-
-*
-  box-sizing: border-box
-
-.container
-  display: grid
-  grid-template-columns: 200px 1fr
-  color: $color-text
-  font-family:  sans-serif
-
-.nav 
-  position: fixed
-
-  width: 200px
-  height: 100vh
-  
-
-  background-color: $background-nav
-  border-right: 1px solid $color-text
-
-  &__title
-    @include nav-border-padding
-    font-weight: bold
-    
   &__list
 
-  &__item
-    @include nav-border-padding
 
+  &__block
+
+
+  &__img
+    width: 200px
+    height: 300px
+    background-image: url(https://loremflickr.com/320/240)
 
   &__link
-    display: block
-
-    width: 100%
-    height: 100%
-
-    text-decoration: none
-    color: inherit
-    &:hover
-      text-decoration: underline
 
 
+  &__nav
 
-.main 
-  grid-column: 2
-  &__list
-    padding: 15px
-  &__list-item
-    margin-bottom: 25px
 
-.text 
-  &__title
-    font-size: 20px
-    font-weight: bold
+    &-list
 
-  &__content
-    margin-top: 20px
 
+    &-block
+
+
+    &-link1
+
+
+    &-link2
+
+
+    &-link3
+
+
+#carousel_block1 > .carousel__img
+    background-image: url(https://picsum.photos/200/300)
