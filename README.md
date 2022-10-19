@@ -1,10 +1,10 @@
 # html-css
 
-task 1.6
+task 1.8
 
-Create a documentation page as in the example. In the left column, there should be a list of all types of CSS displays and a short description of 1 item.
+The final task of the course HTML && CSS! Create a design page on Figma. Using CSS & HTML (scss or sass).
+There must be a responsive design. The usage of animations, if necessary, will be a plus.
 
-Example
-https://drive.google.com/file/d/1wJElfFqyIF1OzFjAWq3_nbTInAPQGtWm/view
+Resource: https://www.figma.com/file/WbZB9f054AQfiJW3ARuFzI/E-commerce-(Website)-(Community)?node-id=0%3A1
 
-Resource link - https://www.w3schools.com/cssref/pr_class_display.asp
+Library  link: https://lms.foxminded.com.ua/mod/assign/view.php?id=1466#:~:text=Resource-,Library%C2%A0%C2%A0link,-Add%20submission

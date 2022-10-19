@@ -51,142 +51,37 @@ table {
   border-spacing: 0;
 }
 
+/* Objective - latin */
+@font-face {
+  font-family: "Objective";
+  font-style: normal;
+  font-weight: 400;
+  src: local("");
+  src: url("../fonts/Objective-Regular.woff2") format("woff2");
+  src: url("../fonts/Objective-Regular.woff") format("woff");
+}
+/* roboto-500 - latin */
+@font-face {
+  font-family: "Objective";
+  font-style: normal;
+  font-weight: 500;
+  src: local("");
+  src: url("../fonts/Objective-Medium.woff2") format("woff2");
+  src: url("../fonts/Objective-Medium.woff") format("woff");
+}
+/* roboto-900 - latin */
+@font-face {
+  font-family: "Objective";
+  font-style: normal;
+  font-weight: 700;
+  src: local("");
+  src: url("../fonts/Objective-Bolt.woff2") format("woff2");
+  src: url("../fonts/Objective-Bolt.woff") format("woff");
+}
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: "Objective";
 }
 
-.carousel {
-  position: relative;
-  height: 400px;
-}
-.carousel__list {
-  width: 600px;
-  height: 400px;
-  display: flex;
-  counter-reset: item;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-}
-.carousel__list::-webkit-scrollbar {
-  display: none;
-}
-.carousel__block {
-  width: 600px;
-  height: 400px;
-  position: relative;
-  scroll-snap-align: center;
-}
-.carousel__img-and-text {
-  width: 600px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: contain;
-}
-.carousel__text {
-  width: 65%;
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3333333333);
-  padding: 10px;
-}
-.carousel__text-title {
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
-  font-size: 20px;
-}
-.carousel__text-content {
-  margin-top: 10px;
-}
-.carousel__link_back {
-  display: block;
-  position: absolute;
-  top: 0;
-  width: 15%;
-  height: 100%;
-  opacity: 0.4;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8235294118), rgba(0, 0, 0, 0));
-  left: 0;
-}
-.carousel__link_back > svg {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  top: 45%;
-  color: #fff;
-}
-.carousel__link_back:focus {
-  opacity: 1;
-}
-.carousel__link_back:hover {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9019607843), rgba(0, 0, 0, 0.5215686275));
-}
-.carousel__link_fore {
-  display: block;
-  position: absolute;
-  top: 0;
-  width: 15%;
-  height: 100%;
-  opacity: 0.4;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8235294118), rgba(0, 0, 0, 0));
-  right: 0;
-}
-.carousel__link_fore > svg {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  top: 45%;
-  color: #fff;
-}
-.carousel__link_fore:focus {
-  opacity: 1;
-}
-.carousel__link_fore:hover {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.9019607843), rgba(0, 0, 0, 0.5215686275));
-}
-.carousel__nav {
-  width: 100%;
-  height: 5%;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.1098039216);
-}
-.carousel__nav-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  gap: 15px;
-}
-.carousel__nav-block {
-  display: inline-block;
-}
-.carousel__nav-link {
-  display: inline-block;
-  border-radius: 50%;
-  width: 7px;
-  height: 7px;
-  border: 1px solid white;
-}
-.carousel__nav-link:hover {
-  background-color: white;
-}
-
-#carousel_block1 > .carousel__img-and-text {
-  background-image: url(https://picsum.photos/600/400);
-}
-
-#carousel_block2 > .carousel__img-and-text {
-  background-image: url(https://picsum.photos/599/399);
-}
-
-#carousel_block3 > .carousel__img-and-text {
-  background-image: url(https://loremflickr.com/600/400);
+.container {
+  max-width: 950px;
 }/*# sourceMappingURL=style.css.map */

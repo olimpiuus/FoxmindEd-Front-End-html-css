@@ -1,122 +1,168 @@
 @import reset.sass
-@mixin size-window
-    width: 600px
-    height: 400px
+@import fonts.sass
 
 @mixin flex-center-center
   display: flex
   justify-content: center
   align-items: center
-  
+
 body
-  @include flex-center-center
-  height: 100vh
+  font-family: 'Objective'
 
-.carousel
-  position: relative
-  height: 400px
-    
-  &__list
-    @include size-window
-    display: flex
-    counter-reset: item
-    overflow-x: scroll
-    scroll-behavior: smooth
-    scroll-snap-type: x mandatory
-  
-    &::-webkit-scrollbar 
-        display: none
+.container
+  max-width: 950px
 
-  &__block
-    @include size-window
-    position: relative
-    scroll-snap-align: center
-    
 
-  &__img-and-text
-    @include size-window
-    @include flex-center-center
-    background-size: contain
+//================HEADER=========== 
 
-  &__text
-    width: 65%
-    text-align: center
-    color: white
-    background-color: #00000055
-    padding: 10px
-    &-title
-      text-transform: uppercase
-      letter-spacing: 0.3rem
-      font-size: 20px
-    &-content
-      margin-top: 10px
-
-  &__link
-    @mixin link
-        display: block
-        position: absolute
-        top: 0
-        width: 15%
-        height: 100%
-        opacity: 0.4
-        &>svg
-            width: 50px
-            height: 50px
-            position: relative
-            top: 45%
-            color: #fff
-        &:focus
-            opacity: 1
-
-    &_back
-        @include link
-        background-image: linear-gradient(to right, #000000d2, #00000000)
-        left: 0
-        &:hover
-            background-image: linear-gradient(to right, #000000e6, #00000085)
-  
-    &_fore
-        @include link
-        background-image: linear-gradient(to left, #000000d2, #00000000)
-        right: 0
-        &:hover
-            background-image: linear-gradient(to left, #000000e6, #00000085)
-
+.header 
 
   &__nav
-    width: 100%
-    height: 5%
 
-    position: absolute
-    bottom: 0
-
-    text-align: center
-    background-color: #0000001c
+  &__logo
 
 
-    &-list
-      @include flex-center-center
-      height: 100%
-      gap: 15px
+.nav 
+  &__list
 
-    &-block 
-      display: inline-block
+  &__link-wrapper
 
-    &-link 
-        display: inline-block
-        border-radius: 50%
-        width: 7px
-        height: 7px
-        border: 1px solid white
-        &:hover
-          background-color: white
+  &__link
 
+// =============HERO===============
 
+.hero 
+  &__wrapper-block
 
-#carousel_block1 > .carousel__img-and-text
-    background-image: url(https://picsum.photos/600/400)
-#carousel_block2 > .carousel__img-and-text
-    background-image: url(https://picsum.photos/599/399)
-#carousel_block3 > .carousel__img-and-text
-    background-image: url(https://loremflickr.com/600/400)
+  &__title
+
+  &__text
+
+  &__img
+
+  &__link
     
+    &-list
+    
+    &-item
+
+// =============SERVICES================
+
+.services 
+
+  &__title
+
+  &__cards-list
+
+  &__card
+
+.card 
+
+  &__logo-wrapper
+
+  &__title
+
+  &__text
+
+  &__link
+
+
+// ==================HOW IT WORKS ===============
+.how-it-works
+
+  &__title
+
+  &__list
+
+  &__step-card
+
+
+
+.steps-card
+
+  &__picture-wrapper
+
+  &__title
+
+  &__text
+
+// ============REVIEWS==============
+
+.reviews 
+
+  &__title
+
+  &__slider
+
+.slider
+
+  &__wrraper
+
+// ==========================DOWNLOAD==================
+
+.download 
+  &__wrapper-block
+
+  &__title
+
+  &__text
+
+  &__link-list
+
+  &__link-item
+
+  &__link
+
+  &__img
+
+// ===================FOOTER=========================
+
+.footer 
+  &__top
+
+  &__logo
+
+
+  &__links
+
+    &-quick
+
+    &-others
+
+    &-products
+
+
+  &__subscribe-form
+
+  &__bottom
+
+  &__copywright
+
+  &__social-list
+
+  &__social-item
+
+  &__social-link
+
+
+.links 
+  &__title
+
+  &__list
+
+  &__item
+
+  &__link
+
+
+
+.form 
+  &__description
+
+  &__form
+
+  &__email
+
+  &__btn
+
+
