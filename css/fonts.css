@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Objective;
+  font-style: normal;
+  font-weight: 400;
+  src: local("");
+  src: url("../fonts/Objective-Regular.woff2") format("woff2");
+  src: url("../fonts/Objective-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: Objective;
+  font-style: normal;
+  font-weight: 500;
+  src: local("");
+  src: url("../fonts/Objective-Medium.woff2") format("woff2");
+  src: url("../fonts/Objective-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: Objective;
+  font-style: normal;
+  font-weight: 700;
+  src: local("");
+  src: url("../fonts/Objective-Bolt.woff2") format("woff2");
+  src: url("../fonts/Objective-Bolt.woff") format("woff");
+}/*# sourceMappingURL=fonts.css.map */

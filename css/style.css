@@ -32,6 +32,15 @@ body {
   line-height: 1;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 ol, ul {
   list-style: none;
 }
@@ -51,37 +60,191 @@ table {
   border-spacing: 0;
 }
 
-/* Objective - latin */
 @font-face {
-  font-family: "Objective";
+  font-family: Objective;
   font-style: normal;
   font-weight: 400;
   src: local("");
   src: url("../fonts/Objective-Regular.woff2") format("woff2");
   src: url("../fonts/Objective-Regular.woff") format("woff");
 }
-/* roboto-500 - latin */
 @font-face {
-  font-family: "Objective";
+  font-family: Objective;
   font-style: normal;
   font-weight: 500;
   src: local("");
   src: url("../fonts/Objective-Medium.woff2") format("woff2");
   src: url("../fonts/Objective-Medium.woff") format("woff");
 }
-/* roboto-900 - latin */
 @font-face {
-  font-family: "Objective";
+  font-family: Objective;
   font-style: normal;
   font-weight: 700;
   src: local("");
   src: url("../fonts/Objective-Bolt.woff2") format("woff2");
   src: url("../fonts/Objective-Bolt.woff") format("woff");
 }
+:root {
+  --color-btns-and-heading-footer: rgba(74, 153, 211, 1);
+}
+
 body {
   font-family: "Objective";
 }
 
 .container {
-  max-width: 950px;
+  padding: 0 15px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.header__logo {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: var(--color-btns-and-heading-footer);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.nav__link:hover {
+  color: var(--color-btns-and-heading-footer);
+}
+
+@media (max-width: 420px) {
+  .header__container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+.hero {
+  background: linear-gradient(#7aafd6 -17.33%, rgba(74, 153, 211, 0) 75.91%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  box-shadow: 0px 4px 16px 0px rgba(75, 0, 129, 0.26);
+}
+.hero__container {
+  display: flex;
+  align-items: center;
+  max-width: 1080px;
+  height: 100vh;
+  padding-top: 130px;
+  transform: translateX(50px);
+}
+.hero__container::after {
+  display: block;
+  content: "";
+  height: 65vh;
+  width: 500px;
+  background-image: url(../img/Mockup.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateZ(-1px) scale(2);
+  background-size: 100%;
+  z-index: -1;
+}
+.hero__wrapper-block {
+  max-width: 640px;
+  margin-right: 32px;
+  flex-shrink: 2;
+  display: flex;
+  flex-direction: column;
+}
+.hero__title {
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.hero__text {
+  font-size: 20px;
+  margin-top: 14px;
+}
+.hero__link {
+  display: block;
+  height: 60px;
+  padding: 15px 25px;
+  background-color: var(--color-btns-and-heading-footer);
+  border-radius: 5px;
+}
+.hero__link-list {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  display: inline-flex;
+  align-self: flex-start;
+}
+@media (max-width: 1250px) {
+  .hero__container {
+    transform: translateX(0px);
+    max-width: 980px;
+  }
+}
+@media (max-width: 850px) {
+  .hero__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero__container::after {
+    width: 300px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .hero__wrapper-block {
+    background: linear-gradient(rgba(122, 176, 214, 0.5176470588) -17.33%, rgba(74, 153, 211, 0) 75.91%), linear-gradient(0deg, rgba(255, 255, 255, 0.4823529412), rgba(255, 255, 255, 0.5294117647));
+    height: 100vh;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-right: 0;
+  }
+}
+@media (max-width: 500px) {
+  .hero__wrapper-block {
+    background: none;
+  }
+  .hero__container {
+    padding-top: 80px;
+    height: 200vh;
+  }
+  .hero__container::after {
+    width: 100vw;
+    position: initial;
+  }
+  .hero__title {
+    font-size: 30px;
+  }
+  .hero__link {
+    display: block;
+    height: 60px;
+    padding: 15px 25px;
+    width: 100%;
+  }
+  .hero__link-list {
+    margin-top: 0px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .hero__link-item {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

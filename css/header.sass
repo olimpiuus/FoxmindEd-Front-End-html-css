@@ -1,0 +1,36 @@
+//================HEADER=========== 
+
+.header 
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 100%
+  &__container
+    @include flex-center-center
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-top: 20px
+    
+  &__nav
+  &__logo
+    font-size: 36px
+    font-weight: 700
+    font-family: sans-serif
+    color: var(--color-btns-and-heading-footer)
+
+.nav 
+  &__list
+    @include flex-center-center
+    gap: 20px
+  &__link-wrapper
+  &__link
+    &:hover
+        color: var(--color-btns-and-heading-footer)
+
+@media (max-width: 420px) 
+  .header__container
+    flex-direction: column
+    justify-content: center
+    gap: 15px  
+

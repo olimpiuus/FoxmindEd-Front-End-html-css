@@ -1,0 +1,108 @@
+// =============HERO===============
+
+.hero
+  background: linear-gradient( #7aafd6 -17.33%, rgba(74, 153, 211, 0) 75.91%),linear-gradient(0deg, #FFFFFF, #FFFFFF)
+  box-shadow: 0px 4px 16px 0px rgba(75, 0, 129, 0.26)
+
+  &__container 
+    display: flex
+    align-items: center
+
+    max-width: 1080px
+    height: 100vh
+    padding-top: 130px
+
+    transform: translateX(50px)
+    &::after
+      display: block
+      content: ''
+      height: 65vh
+      width: 500px
+      background-image: url(../img/Mockup.png)
+      background-size: contain
+      background-repeat: no-repeat
+
+      
+
+  &__wrapper-block
+    max-width: 640px
+    margin-right: 32px
+    flex-shrink: 2
+    display: flex
+    flex-direction: column
+    
+  &__title
+    font-size: 50px
+    line-height: 1.2
+    font-weight: 500
+
+  &__text
+    font-size: 20px
+    margin-top: 14px
+
+  &__link
+    display: block
+    height: 60px
+    padding: 15px 25px
+    background-color: var(--color-btns-and-heading-footer)
+    border-radius: 5px
+    &-list
+      margin-top: 60px
+      @include flex-center-center
+      gap: 15px
+      display: inline-flex
+      align-self: flex-start
+    &-item
+
+@media (max-width: 1250px) 
+  .hero
+    &__container
+      transform: translateX(0px)
+      max-width: 980px
+
+
+@media (max-width: 850px) 
+  .hero
+    &__container
+      flex-direction: column
+      text-align: center
+      &::after
+        width: 300px
+        position: absolute
+        right: 0
+        bottom: 0 
+        z-index: -1
+
+    &__wrapper-block
+      background: linear-gradient( #7ab0d684 -17.33%, rgba(74, 153, 211, 0) 75.91%),linear-gradient(0deg, #ffffff7b, #ffffff87)
+      height: 100vh
+      width: 100%
+      justify-content: space-evenly
+      margin-right: 0
+
+  
+@media (max-width: 500px) 
+  .hero
+    &__wrapper-block
+      background: none
+    &__container
+      padding-top: 80px
+      height: 200vh
+      &::after
+        width: 100vw
+        position: initial
+
+    &__title
+      font-size: 30px
+    &__link
+      display: block
+      height: 60px
+      padding: 15px 25px
+      width: 100%
+      &-list
+        margin-top: 0px
+        flex-wrap: wrap
+        width: 100%
+      &-item
+        width: 100%
+
