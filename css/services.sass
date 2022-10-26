@@ -11,9 +11,16 @@ $translate-design-card-vertical : -70px
 .services 
   position: relative
   &__container
-    padding-top: 160px
+    padding-top: 80px
     padding-bottom: 150px
   &__title
+    font-size: 36px
+    font-weight: 500
+    letter-spacing: 0.05em
+    line-height: calc(46/36)
+    max-width: 395px
+    color: #260041
+    transform: translateY(85%) 
   &__cards-list
     display: grid
     grid-template-columns: 1fr 1fr
@@ -59,6 +66,11 @@ $translate-design-card-vertical : -70px
   &__image
     height: 132px
     width: auto
+    &_above
+      transform: scale(1.4) translateY(-30px)
+    &_right
+      transform: translateX(-15%)
+
 
   &__title
     margin-top: 55px
@@ -106,14 +118,13 @@ $translate-design-card-vertical : -70px
     top: 50%
     
   &>.card__logo-wrapper>.card__image
-    transform: translateX(-15%)
+    
 
 #card2
   &::before
     right: $translate-design-card-horizontal
     top: $translate-design-card-vertical  
-  &>.card__logo-wrapper>.card__image
-    transform: scale(1.4) translateY(-30px)
+    
  
 #card3
   &::before
@@ -125,3 +136,45 @@ $translate-design-card-vertical : -70px
 
         100%
           transform: translate(20px, 3px)
+
+@media (max-width: 1250px) 
+  $translate-design-card-horizontal : -20px
+  #card2
+    &::before
+      right: $translate-design-card-horizontal
+ 
+  #card3
+    &::before
+      right: $translate-design-card-horizontal
+
+@media (max-width: 850px) 
+  .services 
+    &__container
+      padding-top: 40px
+      padding-bottom: 80px
+    &__cards-list
+      gap: 25px
+      row-gap: 25px
+    &__title
+      max-width: 289px
+      transform: translateY(50%) 
+  .card 
+    &__wrapper
+      padding: 30px
+
+@media (max-width: 650px) 
+  .services 
+    &__cards-list
+      grid-template-columns: 1fr
+      row-gap: 100px
+    &__container
+      padding-top: 100px
+      padding-bottom: 100px
+    &__title
+      max-width: 100%
+      transform: translateY(0%) 
+      margin-bottom: 50px
+
+    .card 
+      &__wrapper
+        // padding: 48px
