@@ -1,0 +1,33 @@
+// ==================HOW IT WORKS ===============
+.how-it-works
+  background-color: rgba(74, 153, 211, 0.1)
+  padding: 95px 0
+  &__title
+    text-align: center
+    color: var(--color-btns-and-heading-footer)
+    font-weight: 700
+    font-size: 26px
+
+  &__list
+    margin-top: 88px
+    display: flex
+    gap: 30px
+  &__step-card
+    max-width: 260px
+
+.steps-card
+  text-align: center
+  font-size: 18px
+  &__picture-wrapper
+    height: 65px
+  &__title
+    margin-top: 33px
+    font-weight: 500
+  &__text
+    margin-top: 10px
+    line-height: calc(26/16)
+
+@media (max-width: 500px) 
+  .how-it-works
+    &__list
+      flex-direction: column
