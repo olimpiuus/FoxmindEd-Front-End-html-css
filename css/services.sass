@@ -41,7 +41,7 @@ $translate-design-card-vertical : -70px
     bottom: 0
     left: 0
     
-
+// =================CARD=============================
 .card 
   position: relative
   z-index: 100
@@ -109,7 +109,7 @@ $translate-design-card-vertical : -70px
     &:hover
       border-bottom: 1px solid var(--color-btns-and-heading-footer)
       
-
+// ===========CARDS NUMBERS===========
 #card1
   grid-row: span 2
   align-self: center
@@ -117,15 +117,11 @@ $translate-design-card-vertical : -70px
     left: $translate-design-card-horizontal
     top: 50%
     
-  &>.card__logo-wrapper>.card__image
-    
-
 #card2
   &::before
     right: $translate-design-card-horizontal
     top: $translate-design-card-vertical  
     
- 
 #card3
   &::before
     right: $translate-design-card-horizontal
@@ -136,6 +132,9 @@ $translate-design-card-vertical : -70px
 
         100%
           transform: translate(20px, 3px)
+
+
+// -=================MEDIA============
 
 @media (max-width: 1250px) 
   $translate-design-card-horizontal : -20px
@@ -174,7 +173,3 @@ $translate-design-card-vertical : -70px
       max-width: 100%
       transform: translateY(0%) 
       margin-bottom: 50px
-
-    .card 
-      &__wrapper
-        // padding: 48px
