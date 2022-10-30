@@ -2,20 +2,25 @@
 
 .download 
   margin-top: 100px
-  display: flex
-  flex-direction: row-reverse
-  justify-content: center
-  align-items: center
-  gap: 70px
+  position: relative
+  
+  &__container
+    display: flex
+    flex-direction: row-reverse
+    justify-content: center
+    align-items: center
+    gap: 70px
 
   &__wrapper-block
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
+
   &__title
     font-size: 25px
     font-weight: 700
+
   &__text
     max-width: 445px
     margin-top: 15px
@@ -37,11 +42,35 @@
 
   &__img-wrapper
     max-width: 516px
+
   &__img
     width: 100%
     height: auto
+    
   &__download__img
 
+  // ==================== DECORATION ================================== 
+  // import blocks from services.sass
+
+  @mixin square-decoration-downloads
+    transform: rotate(180deg) translateY(-25%)
+    bottom: 0
+    z-index: -1
+    
+  &::before
+    @include pseudo-element
+    background: url(../img/services/bottom-square.png)
+    @include square-decoration
+    @include square-decoration-downloads
+    right: 0px
+  &::after
+    @include pseudo-element
+    background: url(../img/services/top-square.svg)
+    @include square-decoration
+    @include square-decoration-downloads
+    left: 0
+
+// ================ MEDIA =============================
 
 @media (max-width: 1000px) 
   .download 
@@ -49,7 +78,8 @@
 
 @media (max-width: 850px) 
   .download 
-    flex-direction: column
+    &__container
+      flex-direction: column
 
 @media (max-width: 420px) 
   .download 

@@ -689,6 +689,9 @@ body {
 }
 .download {
   margin-top: 100px;
+  position: relative;
+}
+.download__container {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -734,13 +737,40 @@ body {
   width: 100%;
   height: auto;
 }
+.download::before {
+  display: block;
+  content: "";
+  background: url(../img/services/bottom-square.png);
+  width: 200px;
+  height: 208px;
+  position: absolute;
+  background-size: cover;
+  transform: rotate(180deg) translateY(-25%);
+  bottom: 0;
+  z-index: -1;
+  right: 0px;
+}
+.download::after {
+  display: block;
+  content: "";
+  background: url(../img/services/top-square.svg);
+  width: 200px;
+  height: 208px;
+  position: absolute;
+  background-size: cover;
+  transform: rotate(180deg) translateY(-25%);
+  bottom: 0;
+  z-index: -1;
+  left: 0;
+}
+
 @media (max-width: 1000px) {
   .download {
     gap: 50px;
   }
 }
 @media (max-width: 850px) {
-  .download {
+  .download__container {
     flex-direction: column;
   }
 }
@@ -762,4 +792,31 @@ body {
   .download__link-item {
     width: 100%;
   }
+}
+.container-footer {
+  max-width: 1190px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-btns-and-heading-footer);
+  color: #fff;
+}
+.footer__top {
+  padding: 55px 0 28px;
+  width: 100%;
+}
+.footer__bottom {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+.form {
+  max-width: 400px;
 }/*# sourceMappingURL=style.css.map */
