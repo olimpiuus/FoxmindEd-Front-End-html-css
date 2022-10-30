@@ -1,0 +1,67 @@
+// ==========================DOWNLOAD==================
+
+.download 
+  margin-top: 100px
+  display: flex
+  flex-direction: row-reverse
+  justify-content: center
+  align-items: center
+  gap: 70px
+
+  &__wrapper-block
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  &__title
+    font-size: 25px
+    font-weight: 700
+  &__text
+    max-width: 445px
+    margin-top: 15px
+    opacity: 0.5
+    
+  &__link
+    display: block
+    height: 60px
+    padding: 15px 25px
+    background-color: #000
+    border-radius: 5px
+    &-list
+      @include flex-center-center
+      width: 100%
+      margin-top: 60px
+      gap: 15px
+      display: inline-flex
+      align-self: flex-start
+
+  &__img-wrapper
+    max-width: 516px
+  &__img
+    width: 100%
+    height: auto
+  &__download__img
+
+
+@media (max-width: 1000px) 
+  .download 
+    gap: 50px
+
+@media (max-width: 850px) 
+  .download 
+    flex-direction: column
+
+@media (max-width: 420px) 
+  .download 
+    margin-top: 20px
+    text-align: center
+    &__link
+      display: block
+      height: 60px
+      padding: 15px 25px
+      width: 100%
+      &-list
+        flex-wrap: wrap
+        width: 100%
+      &-item
+        width: 100%
