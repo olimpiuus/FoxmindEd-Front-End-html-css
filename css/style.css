@@ -217,17 +217,24 @@ body {
   }
 }
 @media (max-width: 500px) {
+  .hero {
+    text-align: center;
+  }
   .hero__wrapper-block {
     background: none;
+    gap: 40px;
+    height: auto;
   }
   .hero__container {
-    padding-top: 80px;
-    height: 160vh;
+    height: auto;
   }
   .hero__container::after {
     width: 100vw;
     position: initial;
     background-position: center;
+  }
+  .hero__text {
+    margin-top: 0;
   }
   .hero__title {
     font-size: 30px;
@@ -237,7 +244,6 @@ body {
     height: 60px;
     padding: 15px 25px;
     width: 100%;
-    text-align: center;
   }
   .hero__link-list {
     margin-top: 0px;

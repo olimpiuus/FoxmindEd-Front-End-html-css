@@ -84,16 +84,20 @@
   
 @media (max-width: 500px) 
   .hero
+    text-align: center
     &__wrapper-block
       background: none
+      gap: 40px
+      height: auto
+
     &__container
-      padding-top: 80px
-      height: 160vh
+      height: auto
       &::after
         width: 100vw
         position: initial
         background-position: center
-
+    &__text
+      margin-top: 0
     &__title
       font-size: 30px
     &__link
@@ -101,7 +105,7 @@
       height: 60px
       padding: 15px 25px
       width: 100%
-      text-align: center
+      // text-align: center
       &-list
         margin-top: 0px
         flex-wrap: wrap
