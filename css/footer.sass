@@ -1,5 +1,9 @@
 // ===================FOOTER=========================
-
+@mixin footer-input-border
+  border-radius: 3px
+  background-color: white
+  border: none
+  
 .container-footer
   max-width: 1190px
   padding: 0 15px
@@ -9,73 +13,146 @@
 
 .footer 
   display: flex
-  // grid-template-rows: 5fr 1fr
   flex-direction: column
-  // justify-content: center
   align-items: center
 
   background-color: var(--color-btns-and-heading-footer)
   color: #fff
 
   &__top
-    // @include container-footer
     padding: 55px 0 28px
     width: 100%
-    // display: grid
-    // display: flex
-    // grid-auto-flow: column
-    // justify-content: stretch
+    &>.container-footer
+      gap: 20px
   &__logo
-
-  &__bottom
-    // @include container-footer
-    padding: 20px 0
-    width: 100%
-    text-align: center
-    
-
+    @include logo
 
   &__links
-
+    
     &-quick
 
     &-others
 
     &-products
 
-
   &__subscribe-form
-
+  &__bottom
+    padding: 20px 0
+    width: 100%
+    text-align: center
   
-
   &__copywright
 
-  &__social-list
+  &__social
+    &-list
+      display: flex
+      gap: 20px
 
-  &__social-item
+    &-item
 
-  &__social-link
+    &-link
 
 
 .links 
+  flex-shrink: 0
   &__title
+    display: inline-block
 
+    font-size: 18px
+    font-weight: 500
+    border-bottom: 2px solid white
   &__list
-
+    margin-top: 34px
   &__item
+    &:not(:first-child)
+      margin-top: 18px
 
   &__link
-
+    font-size: 16px
+    &:hover
+      text-decoration: underline
 
 
 .form 
   max-width: 400px
-  &__description
-
+  &__label
+    line-height: calc(26/16)
   &__form
 
-  &__email
+  &__input
+    @include footer-input-border
+    margin-top: 20px
+    margin-right: 10px
+    padding: 18px 10px
+
+    font-size: 14px
 
   &__btn
+    @include footer-input-border
+    padding: 19px
+    font-weight: 700
+    color: var(--color-btns-and-heading-footer)
+    &:hover
+      cursor: pointer
+      opacity: 0.8
+    &:focus-within
+      opacity: 1
+      transform: translate(2px, 2px)
+      background-color: var(--color-btns-and-heading-footer)
+      color: white
+      outline: 1px solid #fff
+
+@media (max-width: 920px) 
+  @mixin footer-input-border
+    width: 100%
+
+  .form
+    &__input
+      @include footer-input-border
+      text-align: center
+    &__btn
+      @include footer-input-border
+      margin-top: 20px
+
+  .links 
+    max-width: 110px
+
+@media (max-width: 700px) 
+  .footer
+    &__top
+      &>.container-footer
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        justify-items: center
+        row-gap: 40px
+    
+    &__logo
+      grid-column: 1/4
+    
+    &__subscribe-form
+      grid-column: 1/4
+      grid-row: 2
+
+@media (max-width: 500px) 
+  .footer
+    text-align: center
+    .links 
+      font-size: 14px
+      line-height: 1.5
+    &__bottom
+      &>.container-footer
+        flex-direction: column-reverse
+        justify-content: center
+        align-items: center
+        gap: 20px
+    &__social
+      &-list
+        width: 100%
+        justify-content: space-evenly
+      &-link
+        &>img
+          width: 40px
+          height: 40px
+
 
 

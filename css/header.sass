@@ -1,4 +1,8 @@
 //================HEADER=========== 
+@mixin logo
+  font-size: 36px
+  font-weight: 700
+  font-family: sans-serif
 
 .header 
   position: absolute
@@ -14,9 +18,7 @@
     
   &__nav
   &__logo
-    font-size: 36px
-    font-weight: 700
-    font-family: sans-serif
+    @include logo
     color: var(--color-btns-and-heading-footer)
 
 .nav 

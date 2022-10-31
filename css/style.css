@@ -689,6 +689,7 @@ body {
 }
 .download {
   margin-top: 100px;
+  padding-bottom: 123px;
   position: relative;
 }
 .download__container {
@@ -812,11 +813,128 @@ body {
   padding: 55px 0 28px;
   width: 100%;
 }
+.footer__top > .container-footer {
+  gap: 20px;
+}
+.footer__logo {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: sans-serif;
+}
 .footer__bottom {
   padding: 20px 0;
   width: 100%;
   text-align: center;
 }
+.footer__social-list {
+  display: flex;
+  gap: 20px;
+}
+.links {
+  flex-shrink: 0;
+}
+.links__title {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 2px solid white;
+}
+.links__list {
+  margin-top: 34px;
+}
+.links__item:not(:first-child) {
+  margin-top: 18px;
+}
+.links__link {
+  font-size: 16px;
+}
+.links__link:hover {
+  text-decoration: underline;
+}
+
 .form {
   max-width: 400px;
+}
+.form__label {
+  line-height: 1.625;
+}
+.form__input {
+  border-radius: 3px;
+  background-color: white;
+  border: none;
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 18px 10px;
+  font-size: 14px;
+}
+.form__btn {
+  border-radius: 3px;
+  background-color: white;
+  border: none;
+  padding: 19px;
+  font-weight: 700;
+  color: var(--color-btns-and-heading-footer);
+}
+.form__btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.form__btn:focus-within {
+  opacity: 1;
+  transform: translate(2px, 2px);
+  background-color: var(--color-btns-and-heading-footer);
+  color: white;
+  outline: 1px solid #fff;
+}
+
+@media (max-width: 920px) {
+  .form__input {
+    width: 100%;
+    text-align: center;
+  }
+  .form__btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .links {
+    max-width: 110px;
+  }
+}
+@media (max-width: 700px) {
+  .footer__top > .container-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 40px;
+  }
+  .footer__logo {
+    grid-column: 1/4;
+  }
+  .footer__subscribe-form {
+    grid-column: 1/4;
+    grid-row: 2;
+  }
+}
+@media (max-width: 500px) {
+  .footer {
+    text-align: center;
+  }
+  .footer .links {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .footer__bottom > .container-footer {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer__social-list {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .footer__social-link > img {
+    width: 40px;
+    height: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
