@@ -1,0 +1,30 @@
+@mixin flex-center-center
+  display: flex
+  justify-content: center
+  align-items: center
+  
+@mixin pseudo-element
+  display: block
+  content: ''
+
+@mixin btn-hover-active
+    &:hover
+      cursor: pointer
+      opacity: 0.8
+    &:focus-within
+      opacity: 1
+      transform: translate(2px, 2px)
+      background-color: var(--color-btns-and-heading-footer)
+      color: white
+      outline: 1px solid #fff
+
+@mixin logo
+  font-size: 36px
+  font-weight: 700
+  font-family: sans-serif
+
+@mixin square-decoration
+  width: 200px
+  height: 208px
+  position: absolute
+  background-size: cover

@@ -1,18 +1,16 @@
 // =============SERVICES================
-@mixin square-decoration
-  width: 200px
-  height: 208px
-  position: absolute
-  background-size: cover
+
 
 $translate-design-card-horizontal : -110px
 $translate-design-card-vertical : -70px
 
 .services 
   position: relative
+
   &__container
     padding-top: 80px
     padding-bottom: 150px
+
   &__title
     font-size: 36px
     font-weight: 500
@@ -21,11 +19,13 @@ $translate-design-card-vertical : -70px
     max-width: 395px
     color: #260041
     transform: translateY(85%) 
+
   &__cards-list
     display: grid
     grid-template-columns: 1fr 1fr
     gap: 105px
     row-gap: 110px
+
   &__card
     
   &::before
@@ -58,7 +58,6 @@ $translate-design-card-vertical : -70px
     height: 153px
     background: url(../img/services/decoration-dots.svg)
 
-
   &__logo-wrapper
     text-align: center
     z-index: 100
@@ -71,14 +70,12 @@ $translate-design-card-vertical : -70px
     &_right
       transform: translateX(-15%)
 
-
   &__title
     margin-top: 55px
     font-size: 20px
     font-weight: 500
     line-height: 1.5
     letter-spacing: 0.2rem
-
 
   &__text
     margin-top: 16px

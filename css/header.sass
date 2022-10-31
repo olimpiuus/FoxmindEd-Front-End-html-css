@@ -1,15 +1,13 @@
 //================HEADER=========== 
-@mixin logo
-  font-size: 36px
-  font-weight: 700
-  font-family: sans-serif
 
 .header 
   position: absolute
+  z-index: 1
   top: 0
   left: 0
 
   width: 100%
+
   &__container
     @include flex-center-center
     justify-content: space-between
@@ -17,6 +15,7 @@
     padding-top: 20px
     
   &__nav
+    
   &__logo
     @include logo
     color: var(--color-btns-and-heading-footer)

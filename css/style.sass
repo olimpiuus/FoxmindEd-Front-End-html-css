@@ -1,24 +1,14 @@
-@import reset.sass
-@import fonts.sass
-
+@import ./reset.sass
+@import ./fonts.sass
+@import ./mixins.sass
 
 :root
   --color-btns-and-heading-footer: #4A99D3
   --color-text: #0F001A
 
-@mixin flex-center-center
-  display: flex
-  justify-content: center
-  align-items: center
-  
-@mixin pseudo-element
-  display: block
-  content: ''
-
 body
   font-family: 'Objective'
   color: var(--color-text)
-  
 
 .container 
   padding: 0 15px

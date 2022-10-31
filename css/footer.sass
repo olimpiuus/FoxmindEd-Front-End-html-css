@@ -28,14 +28,12 @@
     @include logo
 
   &__links
-    
     &-quick
-
     &-others
-
     &-products
 
   &__subscribe-form
+
   &__bottom
     padding: 20px 0
     width: 100%
@@ -47,12 +45,10 @@
     &-list
       display: flex
       gap: 20px
-
     &-item
-
     &-link
 
-
+// =======NAV LINKS============
 .links 
   flex-shrink: 0
   &__title
@@ -72,7 +68,7 @@
     &:hover
       text-decoration: underline
 
-
+// =================FORM===============
 .form 
   max-width: 400px
   &__label
@@ -92,16 +88,9 @@
     padding: 19px
     font-weight: 700
     color: var(--color-btns-and-heading-footer)
-    &:hover
-      cursor: pointer
-      opacity: 0.8
-    &:focus-within
-      opacity: 1
-      transform: translate(2px, 2px)
-      background-color: var(--color-btns-and-heading-footer)
-      color: white
-      outline: 1px solid #fff
+    @include btn-hover-active
 
+// ======================MEDIA==================
 @media (max-width: 920px) 
   @mixin footer-input-border
     width: 100%
@@ -136,19 +125,23 @@
 @media (max-width: 500px) 
   .footer
     text-align: center
+
     .links 
       font-size: 14px
       line-height: 1.5
+
     &__bottom
       &>.container-footer
         flex-direction: column-reverse
         justify-content: center
         align-items: center
         gap: 20px
+
     &__social
       &-list
         width: 100%
         justify-content: space-evenly
+
       &-link
         &>img
           width: 40px
