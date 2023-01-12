@@ -910,6 +910,7 @@ body {
   outline: 1px solid #fff;
 }
 
+
 @media (max-width: 920px) {
   .form__input {
     width: 100%;
@@ -961,3 +962,148 @@ body {
     height: 40px;
   }
 }/*# sourceMappingURL=style.css.map */
+=======
+
+#carousel_block3 > .carousel__img-and-text {
+  background-image: url(https://loremflickr.com/600/400);
+}/*# sourceMappingURL=style.css.map */
+
+.text__content {
+  margin-top: 20px;
+
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("");
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2");
+  src: url("../fonts/roboto-v30-latin-regular.woff") format("woff");
+}
+/* roboto-900 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("");
+  src: url("../fonts/roboto-v30-latin-900.woff2") format("woff2");
+  src: url("../fonts/roboto-v30-latin-900.woff") format("woff");
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f2f2f;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: white;
+}
+.dot-list {
+  display: flex;
+  gap: 18px;
+  -webkit-animation: eat 0.5s linear 0s infinite forwards;
+          animation: eat 0.5s linear 0s infinite forwards;
+}
+.first-dot {
+  -webkit-animation: first-dot 0.5s linear 0s infinite forwards;
+          animation: first-dot 0.5s linear 0s infinite forwards;
+}
+
+.pacman {
+  position: relative;
+}
+.pacman__round {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: yellow;
+}
+.pacman__slice {
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 20px solid #2f2f2f;
+  border-bottom: 20px solid transparent;
+  border-radius: 100%;
+  animation: pacman 0.5s ease-in 0s infinite alternate-reverse;
+}
+
+@-webkit-keyframes pacman {
+  0% {
+    border-right: 20px solid #2f2f2f;
+  }
+  100% {
+    border-right: 20px solid #2f2f2f;
+    border-right-width: 400px;
+  }
+}
+
+@keyframes pacman {
+  0% {
+    border-right: 20px solid #2f2f2f;
+  }
+  100% {
+    border-right: 20px solid #2f2f2f;
+    border-right-width: 400px;
+  }
+}
+@-webkit-keyframes eat {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-24px);
+  }
+}
+@keyframes eat {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-24px);
+  }
+}
+@-webkit-keyframes first-dot {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes first-dot {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
