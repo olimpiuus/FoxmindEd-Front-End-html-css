@@ -1,119 +1,32 @@
 
-@import reset.sass
-@mixin size-window
-    width: 600px
-    height: 400px
+@import ./reset.sass
+@import ./fonts.sass
+@import ./mixins.sass
+:root
+  --color-btns-and-heading-footer: #4A99D3
+  --color-text: #0F001A
 
-@mixin flex-center-center
-  display: flex
-  justify-content: center
-  align-items: center
-  
 body
-  @include flex-center-center
-  height: 100vh
+  font-family: 'Objective'
+  color: var(--color-text)
 
-.carousel
-  position: relative
-  height: 400px
-    
-  &__list
-    @include size-window
-    display: flex
-    counter-reset: item
-    overflow-x: scroll
-    scroll-behavior: smooth
-    scroll-snap-type: x mandatory
-  
-    &::-webkit-scrollbar 
-        display: none
-
-  &__block
-    @include size-window
-    position: relative
-    scroll-snap-align: center
-    
-
-  &__img-and-text
-    @include size-window
-    @include flex-center-center
-    background-size: contain
-
-  &__text
-    width: 65%
-    text-align: center
-    color: white
-    background-color: #00000055
-    padding: 10px
-    &-title
-      text-transform: uppercase
-      letter-spacing: 0.3rem
-      font-size: 20px
-    &-content
-      margin-top: 10px
-
-  &__link
-    @mixin link
-        display: block
-        position: absolute
-        top: 0
-        width: 15%
-        height: 100%
-        opacity: 0.4
-        &>svg
-            width: 50px
-            height: 50px
-            position: relative
-            top: 45%
-            color: #fff
-        &:focus
-            opacity: 1
-
-    &_back
-        @include link
-        background-image: linear-gradient(to right, #000000d2, #00000000)
-        left: 0
-        &:hover
-            background-image: linear-gradient(to right, #000000e6, #00000085)
-  
-    &_fore
-        @include link
-        background-image: linear-gradient(to left, #000000d2, #00000000)
-        right: 0
-        &:hover
-            background-image: linear-gradient(to left, #000000e6, #00000085)
+.container 
+  padding: 0 15px
+  max-width: 980px
+  margin: 0 auto
 
 
-  &__nav
-    width: 100%
-    height: 5%
-
-    position: absolute
-    bottom: 0
-
-    text-align: center
-    background-color: #0000001c
-
-
-    &-list
-      @include flex-center-center
-      height: 100%
-      gap: 15px
-
-    &-block 
-      display: inline-block
-
-    &-link 
-        display: inline-block
-        border-radius: 50%
-        width: 7px
-        height: 7px
-        border: 1px solid white
-        &:hover
-          background-color: white
+@import ./header.sass
+@import ./hero.sass
+@import ./services.sass
+@import ./how-it-works.sass
+@import ./reviews.sass
+@import ./download.sass
+@import ./footer.sass
 
 
 
+=======
 
 #carousel_block1 > .carousel__img-and-text
     background-image: url(https://picsum.photos/600/400)
@@ -179,4 +92,3 @@ body
 
 .email
   grid-column: 1 / 3
-

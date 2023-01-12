@@ -12,78 +12,276 @@
 </head>
 
 <body>
-    <div class="carousel">
-        <ul class="carousel__list">
-            <li class="carousel__block" id="carousel_block1">
-                <div class="carousel__img-and-text">
-                    <div class="carousel__text">
-                        <h3 class="carousel__text-title">Title Carousel</h3>
-                        <p class="carousel__text-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio veniam enim. Quae provident, suscipit amet dolores delectus ullam debitis ut fugiat tempora, necessitatibus sequi eaque eum, doloribus earum cum.</p>
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__logo">LOGO</div>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__link-wrapper"><a href="" class="nav__link">Home</a></li>
+                    <li class="nav__link-wrapper"><a href="" class="nav__link">About</a></li>
+                    <li class="nav__link-wrapper"><a href="" class="nav__link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero__container container">
+            <div class="hero__wrapper-block">
+                <h1 class="hero__title">New E-commerce App best for You</h1>
+                <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet sed vulputate vitae velit dictum cursus amet. Turpis donec ut velit quis. Cursus commodo, eget urna, sapien amet. </p>
+                <ul class="hero__link-list">
+                    <li class="hero__link-item">
+                        <a href="" class="hero__link">
+                            <img src="./img/download-play.svg" alt="download link google play">
+                        </a>
+                    </li>
+                    <li class="hero__link-item">
+                        <a href="" class="hero__link">
+                            <img src="./img/download-apple.svg" alt="download link app store">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="hero__img">
+								<img src="./img/Mockup.png" alt="mockup">
+						</div> -->
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container services__container">
+            <h2 class="services__title">What we do to help our customers in digital era.</h2>
+            <ul class="services__cards-list">
+                <li class="services__card card" id="card1">
+                    <div class="card__wrapper">
+                        <div class="card__logo-wrapper">
+                            <img class="card__image card__image_right" src="./img/services/1.png" alt="service receive">
+                        </div>
+                        <h3 class="card__title">Receive</h3>
+                        <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lore</p>
+                        <a href="" class="card__link">Learn more</a>
                     </div>
-                </div>
-                <a href="#carousel_block3" class="carousel__link_back">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
-                    </svg>
-                </a>
-                <a href="#carousel_block2" class="carousel__link_fore">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                    </svg>
-                </a>
-            </li>
-            <li class="carousel__block" id="carousel_block2">
-                <div class="carousel__img-and-text">
-                    <div class="carousel__text">
-                        <h3 class="carousel__text-title">Title Carousel</h3>
-                        <p class="carousel__text-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio veniam enim. Quae provident, suscipit amet dolores delectus ullam debitis ut fugiat tempora, necessitatibus sequi eaque eum, doloribus earum cum.</p>
-                    </div>
-                </div>
-                <a href="#carousel_block1" class="carousel__link_back">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
-                    </svg>
-                </a>
-                <a href="#carousel_block3" class="carousel__link_fore">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                    </svg>
-                </a>
-            </li>
-            <li class="carousel__block" id="carousel_block3">
-                <div class="carousel__img-and-text">
-                    <div class="carousel__text">
-                        <h3 class="carousel__text-title">Title Carousel</h3>
-                        <p class="carousel__text-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio veniam enim. Quae provident, suscipit amet dolores delectus ullam debitis ut fugiat tempora, necessitatibus sequi eaque eum, doloribus earum cum.</p>
-                    </div>
-                </div>
-                <a href="#carousel_block2" class="carousel__link_back">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
-                    </svg>
-                </a>
-                <a href="#carousel_block1" class="carousel__link_fore">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                    </svg>
-                </a>
-            </li>
-        </ul>
-        <aside class="carousel__nav">
-            <ul class="carousel__nav-list">
-                <li class="carousel__nav-block">
-                    <a href="#carousel_block1" class="carousel__nav-link"></a>
                 </li>
-                <li class="carousel__nav-block">
-                    <a href="#carousel_block2" class="carousel__nav-link"></a>
+                <li class="services__card card" id="card2">
+                    <div class="card__wrapper">
+                        <div class="card__logo-wrapper">
+                            <img class="card__image card__image_above" src="./img/services/2.png" alt="service send">
+                        </div>
+                        <h3 class="card__title">Send</h3>
+                        <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lore</p>
+                        <a href="" class="card__link">Learn more</a>
+                    </div>
                 </li>
-                <li class="carousel__nav-block">
-                    <a href="#carousel_block3" class="carousel__nav-link"></a>
+                <li class="services__card card" id="card3">
+                    <div class="card__wrapper">
+                        <div class="card__logo-wrapper">
+                            <img class="card__image" src="./img/services/3.png" alt="service buy">
+                        </div>
+                        <h3 class="card__title">Buy</h3>
+                        <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lore</p>
+                        <a href="" class="card__link">Learn more</a>
+                    </div>
                 </li>
             </ul>
-        </aside>
-    </div>
+        </div>
+    </section>
 
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="how-it-works__title">How it works</h2>
+            <ul class="how-it-works__list">
+                <li class="how-it-works__steps-card steps-card">
+                    <div class="steps-card__picture-wrapper"><img class="steps-card__image" src="./img/how-it-works/authorization.svg" alt=""></div>
+                    <h3 class="steps-card__title">Create an account</h3>
+                    <p class="steps-card__text">Lorem ipsum dolor sit amet, consecteteu.</p>
+                </li>
+                <li class="how-it-works__steps-card steps-card">
+                    <div class="steps-card__picture-wrapper"><img class="steps-card__image" src="./img/how-it-works/create.svg" alt=""></div>
+                    <h3 class="steps-card__title">Get authorization</h3>
+                    <p class="steps-card__text">Lorem ipsum dolor sit amet, consecteteu.</p>
+                </li>
+                <li class="how-it-works__steps-card steps-card">
+                    <div class="steps-card__picture-wrapper"><img class="steps-card__image" src="./img/how-it-works/enjoy.svg" alt=""></div>
+                    <h3 class="steps-card__title">Enjoy the app</h3>
+                    <p class="steps-card__text">Lorem ipsum dolor sit amet, consecteteu.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <!-- <div class="container"> -->
+        <h2 class="reviews__title">What our client say</h2>
+        <div class="reviews__slider slider__wrraper">
+            <div class="carousel">
+                <ul class="carousel__list">
+                    <li class="carousel__block" id="carousel_block1">
+                        <div class="carousel__img-and-text">
+                            <div class="carousel__image-wrapper">
+                                <img src="./img/how-it-works/person.png" alt="" class="carousel__img">
+                            </div>
+                            <div class="carousel__text">
+                                <p class="carousel__text-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio veniam enim. Quae provident, suscipit amet dolores delectus ullam debitis ut fugiat tempora, necessitatibus sequi eaque eum, doloribus earum cum.</p>
+                                <h3 class="carousel__text-title">Angel Paulina</h3>
+                            </div>
+                        </div>
+                        <div class="carousel__links">
+                            <a href="#carousel_block3" class="carousel__link_back">
+                                <svg viewBox="0 0 24 24">
+																				<path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+																		</svg>
+                            </a>
+                            <a href="#carousel_block2" class="carousel__link_fore">
+                                <svg viewBox="0 0 24 24">
+																				<path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+																		</svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="carousel__block" id="carousel_block2">
+                        <div class="carousel__img-and-text">
+                            <div class="carousel__image-wrapper"><img src="./img/how-it-works/person.png" alt="" class="carousel__img"></div>
+                            <div class="carousel__text">
+                                <p class="carousel__text-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio veniam enim. Quae provident, suscipit amet dolores delectus ullam debitis ut fugiat tempora, necessitatibus sequi eaque eum, doloribus earum cum.</p>
+                                <h3 class="carousel__text-title">Angel Paulina</h3>
+                            </div>
+                        </div>
+                        <div class="carousel__links">
+                            <a href="#carousel_block1" class="carousel__link_back">
+                                <svg viewBox="0 0 24 24">
+																				<path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+																		</svg>
+                            </a>
+                            <a href="#carousel_block3" class="carousel__link_fore">
+                                <svg viewBox="0 0 24 24">
+																				<path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+																		</svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="carousel__block" id="carousel_block3">
+                        <div class="carousel__img-and-text">
+                            <div class="carousel__image-wrapper"><img src="./img/how-it-works/person.png" alt="" class="carousel__img"></div>
+                            <div class="carousel__text">
+                                <p class="carousel__text-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio veniam enim. Quae provident, suscipit amet dolores delectus ullam debitis ut fugiat tempora, necessitatibus sequi eaque eum, doloribus earum cum.</p>
+                                <h3 class="carousel__text-title">Angel Paulina</h3>
+                            </div>
+                        </div>
+                        <div class="carousel__links">
+                            <a href="#carousel_block2" class="carousel__link_back">
+                                <svg viewBox="0 0 24 24">
+																				<path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+																		</svg>
+                            </a>
+                            <a href="#carousel_block1" class="carousel__link_fore">
+                                <svg viewBox="0 0 24 24">
+																				<path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+																		</svg>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- </div> -->
+    </section>
+
+    <section class="download">
+
+        <div class="download__container container">
+            <div class="download__wrapper-block">
+                <h2 class="download__title">Download app to enjoy more!</h2>
+                <p class="download__text">Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis elementum amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt pretium.</p>
+                <ul class="download__link-list">
+                    <li class="download__link-item">
+                        <a href="" class="download__link">
+                            <img src="./img/download-play-white.svg" alt="download link google play">
+                        </a>
+                    </li>
+                    <li class="download__link-item">
+                        <a href="" class="download__link">
+                            <img src="./img/download-apple.svg" alt="download link app store">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="download__img-wrapper">
+                <img src="./img/download-section.png" class="download__img" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container-footer">
+                <div class="footer__logo">LOGO</div>
+                <nav class="footer__links-quick links">
+                    <h4 class="links__title">Quick Links</h4>
+                    <ul class="links__list">
+                        <li class="links__item"><a href="" class="links__link">Sign Up</a></li>
+                        <li class="links__item"><a href="" class="links__link">About Us</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__links-others links">
+                    <h4 class="links__title">Others</h4>
+                    <ul class="links__list">
+                        <li class="links__item"><a href="" class="links__link">User FAQs</a></li>
+                        <li class="links__item"><a href="" class="links__link">Contact Us</a></li>
+                        <li class="links__item"><a href="" class="links__link">Legal</a></li>
+                        <li class="links__item"><a href="" class="links__link">Privacy Policy</a></li>
+                        <li class="links__item"><a href="" class="links__link">Terms and Conditions</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__links-products links">
+                    <h4 class="links__title">Products</h4>
+                    <ul class="links__list">
+                        <li class="links__item"><a href="" class="links__link">Send</a></li>
+                        <li class="links__item"><a href="" class="links__link">Receive</a></li>
+                        <li class="links__item"><a href="" class="links__link">Buy</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__subscribe-form form__wrapper">
+                    <!-- <p class="form__description">Subscribe to our newsletter and be the first to know about our updates</p> -->
+                    <form action="/" class="form">
+                        <label class="form__label">
+                            Subscribe to our newsletter and be the first to know about our updates
+                            <br>
+                            <input type="email" class="form__input" placeholder="Email Address">
+                        </label>
+                        <button type="submit" class="form__btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container-footer">
+                <p class="footer__copywright">Copyright © 2020. All rights reserved.</p>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <a target="_blank" href="" class="footer__social-link">
+                            <img src="./img/footer/Youtube.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a target="_blank" href="" class="footer__social-link">
+                            <img src="./img/footer/Instagram.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a target="_blank" href="" class="footer__social-link">
+                            <img src="./img/footer/Facebook.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a target="_blank" href="" class="footer__social-link">
+                            <img src="./img/footer/Twitter.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
