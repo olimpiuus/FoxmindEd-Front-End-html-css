@@ -1,8 +1,7 @@
 # html-css
 
-task 1.3
+task 1.4
 
-Create a form with a similar design, be sure to use all the specified inputs.
-It would be a plus to use the var in CSS to change the text color easily  (or you can import the scss or sass preprocessor)
+Create an animation using CSS. Check out the example
 
-Library  link - https://www.studytonight.com/sass/
+Library  link - https://drive.google.com/file/d/1zy-DKYdNCHcyfStpA8a6t8_ZEPZdunuu/view
